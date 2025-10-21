@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+apps/*/dist/
+apps/*/build/
+apps/*/.next/
+packages/*/dist/
+packages/*/build/
+out/
+dist-ssr/
+
+# Caches
+.turbo/
+apps/*/.turbo/
+packages/*/.turbo/
+.cache/
+
+# Coverage
+coverage/
+
+# TypeScript
+*.tsbuildinfo

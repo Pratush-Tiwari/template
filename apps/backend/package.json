@@ -1,0 +1,26 @@
+{
+  "name": "@template/backend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx -r dotenv/config src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node -r dotenv/config dist/index.js",
+    "lint": "tsc --noEmit",
+    "lint:fix": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@template/db": "workspace:*",
+    "@template/shared-types": "workspace:*",
+    "@t3-oss/env-core": "^0.13.8",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "tsx": "^4.19.2",
+    "@template/config": "workspace:*"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "template-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.10.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:backend": "turbo run dev --filter=@template/backend",
+    "dev:frontend": "turbo run dev --filter=@template/frontend",
+    "build": "turbo run build",
+    "start": "turbo run start preview",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix --continue",
+    "typecheck": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css,html}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,css,html}\"",
+    "clean": "rm -rf node_modules .turbo && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "ci": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm build",
+    "ci:pipeline": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm build"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.3",
+    "typescript": "^5.5.4",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "zod": "^3.23.8"
+  }
+}
